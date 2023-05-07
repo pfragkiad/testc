@@ -29,6 +29,9 @@ void testSolver()
 
 int main(int argc, char **argv)
 {
+    double _Complex z=2.0+3.0i; //compile test
+
+
     testSolver(); return 0;
 
     // printf("The value is %lf\n",df2_central(kf,3,0.001));
