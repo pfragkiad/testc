@@ -21,16 +21,10 @@ double ftest(double x, double y)
     return 1+y*y;
 }
 
-
-
 void testSolver()
 {
-    //
     solveScenario scenario = getSampleScenario(SOLVEPOW10);
-
     solve(&scenario);
-    //rootFinder result = bisect(ftosolve,1,10,1e-5,1e8);
-
 }
 
 int main(int argc, char **argv)

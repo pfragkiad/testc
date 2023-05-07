@@ -11,8 +11,6 @@ typedef struct rootFinder_t
 } rootFinder, *pRootFinder;
 
 
-
-
 /*
 Root solver using the bisection method.
 xl: x left

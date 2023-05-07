@@ -13,14 +13,14 @@ enum CStandard
     C18 = 201710L
 };
 
-int IsAtLeastC18();
+int isAtLeastC18();
 
-int IsAtLeastC11();
+int isAtLeastC11();
 
-int IsAtLeastC99();
+int isAtLeastC99();
 
-int IsAtLeastC94();
+int isAtLeastC94();
 
-int IsAtLeastStandardC();
+int isAtLeastStandardC();
 
-const char* GetCVersion();
+const char* getCVersion();
