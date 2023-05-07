@@ -18,7 +18,7 @@ xy *rk1(double (*f)(double, double), double x0, double y0, double xn, int interv
 {
     double h = (xn - x0) / (double)intervals;
 
-    xy *values = (xy *)malloc((intervals + 1) * sizeof(xy));
+    xy *values = malloc((intervals + 1) * sizeof(xy));
     values[0] = (xy){.x = x0, .y = y0};
 
     for (size_t i = 1; i <= intervals; i++)
@@ -41,7 +41,7 @@ xy *rk4(double (*f)(double, double), double x0, double y0, double xn, int interv
     printf("x0 = %lf, y0 = %lf, n= %ld, h = %lf\n", x0, y0, intervals, h);
 #endif
 
-    xy *values = (xy *)malloc((intervals + 1) * sizeof(xy));
+    xy *values = malloc((intervals + 1) * sizeof(xy));
     values[0] = (xy){.x = x0, .y = y0};
 
     for (size_t i = 1; i <= intervals; i++)
@@ -83,7 +83,7 @@ xyn rk45(double (*f)(double, double), double x0, double y0, double xn, double h0
 #endif
 
     size_t steps = 1ul;
-    xy *values = (xy *)malloc(sizeof(xy));
+    xy *values = malloc(sizeof(xy));
     values[steps-1] = (xy){.x = x0, .y = y0};
 
     double x = x0, y = y0;
@@ -124,7 +124,7 @@ xyn rk45(double (*f)(double, double), double x0, double y0, double xn, double h0
             x += h;
             //keep the solution
             y = y1;
-            values = (xy *)realloc(values, sizeof(xy) * ++steps);
+            values = realloc(values, sizeof(xy) * ++steps);
             values[steps - 1] = (xy){.x = x, .y = y};
 
 #ifdef DEBUG
